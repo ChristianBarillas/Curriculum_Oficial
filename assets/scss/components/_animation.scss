@@ -1,0 +1,10 @@
+$mainColor: #04B4FA;
+
+.animationSV{
+    color: $mainColor;
+    font-weight: 800;
+    text-shadow: 0 0 10px $mainColor;
+    animation: slideText 1s ease-in;
+    -webkit-animation: slideText 1s ease-in;
+    animation-delay: .7s;
+}
