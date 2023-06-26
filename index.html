@@ -19,11 +19,69 @@
         <!-- VIDEOS YOUTUBE PLAYBACK (videojs)-->
 
         <link href="https://vjs.zencdn.net/7.10.2/video-js.min.css" rel="stylesheet">
+       
+        <link rel="stylesheet" href="assets/css/tailwind.css" />
+
+  
 
       
         <title>ChristianBarillas</title>
     </head>
     <body>
+
+         <!-- ====== Modal Section Start -->
+    <section x-data="{modalOpen: true}"  >
+        <div class="container mx-auto">
+          
+        </div>
+  
+        <div
+          x-show="modalOpen"
+          x-transition
+          class="fixed top-0 left-0 flex h-full min-h-screen w-full items-center justify-center bg-black bg-opacity-90 px-4 py-5"
+
+          style="z-index: 999;"
+        >
+          <div
+            @click.outside="modalOpen = false"
+            class="w-full max-w-[570px] rounded-[20px] bg-white py-12 px-8 text-center md:py-[60px] md:px-[70px]"
+          >
+            <h3 class="pb-2 text-xl font-bold text-dark sm:text-2xl">
+              La pagina no esta actiualizada con los nuevos proyectos.
+            </h3>
+            <span
+              class="mx-auto mb-6 inline-block h-1 w-[90px] rounded bg-primary"
+            ></span>
+            <p class="mb-10 text-base leading-relaxed text-body-color">
+              Se actualizara lo mas pronto posible, puedes visitar mi github para ver todos los proyectos, si gusta alguno en especifico favor contactar (algunos son proyectos grandes y privados)
+            </p>
+            <div class="-mx-3 flex flex-wrap">
+              <div class="w-1/2 px-3">
+               
+                <a href="https://github.com/ChristianBarillas" class="block w-full rounded-lg border border-[#E9EDF9] p-3 text-center text-base font-medium text-dark transition hover:border-red-600 hover:bg-black hover:text-white" target="_blanck" >
+                
+                    Github
+                  </a>
+                
+               
+              </div>
+              <div class="w-1/2 px-3">
+                <button
+                @click="modalOpen = false"
+                  class="block w-full rounded-lg border border-primary bg-primary p-3 text-center text-base font-medium text-white transition hover:bg-opacity-90"
+                >
+                  Entendido!
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ====== Modal Section End -->
+
+
+
+
         <!--==================== HEADER ====================-->
         <header class="header" id="header">
             <nav class="nav container">
@@ -1044,7 +1102,7 @@
 
        <script src="./assets/js/video.js"></script>
 
-  
+       <script defer src="assets/js/alpine.min.js"></script>
      </body>
 
    
